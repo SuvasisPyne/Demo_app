@@ -13,7 +13,7 @@ class UsersController < ApplicationController
    redirect_to user_path(@u)
   end
   def delete
-   redirect_to(user_path(@user))
+   #redirect_to(user_path(@user))
   end
   def edit
   end

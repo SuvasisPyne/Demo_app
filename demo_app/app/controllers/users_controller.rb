@@ -12,7 +12,7 @@ class UsersController < ApplicationController
    @u=User.create!(params[:user])
    redirect_to user_path(@u)
   end
-  def delete
+  def destroy
    #redirect_to(user_path(@user))
   end
   def edit
