@@ -13,7 +13,9 @@ class UsersController < ApplicationController
    redirect_to user_path(@u)
   end
   def destroy
-   #redirect_to(user_path(@user))
+   @user = User.find(params[:id])
+   @user.destroy
+   redirect_to users_path
   end
   def edit
   end
