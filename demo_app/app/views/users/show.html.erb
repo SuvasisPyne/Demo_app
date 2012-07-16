@@ -1,3 +1,4 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
-<a href="index.html.erb">Go to index page</a>
+Welcome <%= @user.name %><br>
+<%= link_to "Go to index page", users_path %>

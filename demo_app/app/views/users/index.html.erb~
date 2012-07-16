@@ -1,9 +1,12 @@
 <h1>Users#index</h1>
+<ul>
 <% @usrs.each do |u| %>
-<% =u.name %>
-<% =u.email %>
-<% link_to "Show",user_path(u) %>
-<% link_to "Delete",users_path(u), :method => :delete %>
-<% link_to "Edit",edit_user_path(u) %><br><br>
-<% u.button 'Click to Create user' %>
+<li><%= u.name %>
+<%= u.email %>
+<%= link_to "Show",user_path(u) %>
+<%= link_to "Delete",users_path(u), :method => :delete %>
+<%= link_to "Edit",edit_user_path(u) %></li>
+
+<% end %></ul>
+<%= link_to "Create a new user", new_user_path %>
 <p>Find me in app/views/users/index.html.erb</p>
