@@ -9,11 +9,11 @@ class UsersController < ApplicationController
    @usrs = User.all 
   end
   def create
-   User.create!(params[:user])
-   redirect_to(user_path(@user))
+   @u=User.create!(params[:user])
+   redirect_to user_path(@u)
   end
   def delete
-   redirect_to(user_path(@user))
+   #redirect_to(user_path(@user))
   end
   def edit
   end
