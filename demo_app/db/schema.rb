@@ -22,12 +22,12 @@ ActiveRecord::Schema.define(:version => 20120711161614) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name",           :null => false
+    t.string   "user_name",      :null => false
     t.string   "email",          :null => false
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
     t.integer  "contact_number"
-    t.integer  "type"
+    t.integer  "user_type"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "full_name"
