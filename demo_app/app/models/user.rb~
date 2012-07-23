@@ -13,10 +13,6 @@ class User < ActiveRecord::Base
   before_save :make_full_name
   protected
   def make_full_name
-
-   self.full_name = self.first_name+ ' ' +self.last_name if full_name.blank?
-
-    full_name = first_name + ' ' + last_name if full_name.blank?
-
+    self.full_name = self.first_name+ ' ' +self.last_name if full_name.blank?
   end
 end

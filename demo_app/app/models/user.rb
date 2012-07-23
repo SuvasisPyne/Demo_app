@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   #attr_accessible :name, :email, :type, :contact_number, :first_name, :last_name, :full_name
 
-  has_many :posts, :dependent => :destroy
+  has_many :posts
   validates :user_name, :email, :presence => true 
   validates :email, :uniqueness => true
   validates :user_type, :numericality => { :only_integer => true, :less_than => 5 }
