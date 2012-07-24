@@ -12,10 +12,13 @@ class PostsController < ApplicationController
  end
  def create
   @user=User.find(params[:user_id])
-  @post=@user.post.create!(params[:post])
+  @post=@user.posts.create!(params[:post])
   redirect_to user_path(@user)
  end
  def destroy
+  @user=User.find(params[:user_id])
+  @user.posts.find(params[:id]).destroy 
+  redirect_to user_path(@user)
  end
  def edit
  end

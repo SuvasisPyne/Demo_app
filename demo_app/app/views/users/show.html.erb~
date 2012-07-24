@@ -1,14 +1,23 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
-<h3>Welcome <%= @user.user_name %></h3><
+<h3>Welcome <%= @user.user_name %></h3>
+<br>
+
+Email Id: <%= @user.email %><br>
+Full Name: <%= @user.full_name %><br>
+Type: <%= @user.user_type %><br>
+Contact Number: <%= @user.contact_number %><br>
+
+<br>
+<
 <%= link_to "Go to index page", users_path %>
 <br>
 <h3>Your Posts</h3>
 <ul>
 <% @user.posts.each do |p| %>
 <li>
-<%= link_to p.title, user_post_path(@user, p) %>
+<%= link_to p.title, user_post_path(@user, p) %> | <%= link_to "Delete", user_post_path(@user, p), :method => :delete %>
 </li>
 <% end %>
 </ul>
-<%= link_to "Write a New Post", new_user_post_path %>
+<%= link_to "Write a New Post", new_user_post_path(@user) %>

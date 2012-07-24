@@ -1,9 +1,10 @@
 <h1>This is where you write new post</h1>
 
-<%= form_for(@post), :url => user_posts_path(@post), :method => :post do |p| %>
+<%= form_for @post, :url => user_posts_path(@user), :method => :post do |p| %>
 <!--<%= p.error_messages %>-->
 <p><%= p.label :title, 'Enter the Title of the post' %><%= p.text_field :title %><br>
-<%= p.label :description, 'Type your post' %><%= p.text_field :description %><br>
+<%= p.label :description, 'Type your post' %><br>
+<%= p.text_area :description %><br>
 
 </p><%= p.submit "Click to submit post" %>
 <% end %>

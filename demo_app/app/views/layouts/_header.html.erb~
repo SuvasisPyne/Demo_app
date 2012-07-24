@@ -1,0 +1,4 @@
+<div>
+<a href="index.html.erb"><%= image_tag "logo.jpg", :size => "50x20" %></a>
+First Application
+</div>
