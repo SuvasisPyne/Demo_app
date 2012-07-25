@@ -44,7 +44,7 @@ body
 </style>
 </head>
 <body>
-<div id="main"
+<div id="main">
 <%= render "layouts/header" %>
 <div id="d1">
 <%= yield %>

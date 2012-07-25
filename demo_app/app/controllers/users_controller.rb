@@ -11,6 +11,8 @@ class UsersController < ApplicationController
   def create
    @u=User.create!(params[:user])
    redirect_to user_path(@u)
+   UserMailer.welcome_email(@u).deliver if @u.save
+   
   end
   def destroy
    @user = User.find(params[:id])

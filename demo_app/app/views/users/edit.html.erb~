@@ -1,2 +1,12 @@
 <h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<%= form_for(@user) do |u| %>
+<!--<%= u.error_messages %>-->
+<p><%= u.label :user_name, 'Enter your User name' %><%= u.text_field :user_name %><br>
+<%= u.label :email, 'Enter your email' %><%= u.text_field :email %><br>
+<%= u.label :contact_number, 'Enter your Contact Number' %><%= u.text_field :contact_number %><br>
+<%= u.label :user_type, 'Enter your type' %><%= u.text_field :user_type %><br>
+<%= u.label :first_name, 'Enter your First Name' %><%= u.text_field :first_name %><br>
+<%= u.label :last_name, 'Enter your Last Name' %><%= u.text_field :last_name %><br>
+<%= u.label :full_name, 'Your Full Name is' %><%= u.text_field :full_name %><br>
+</p><%= u.submit "Click to Update" %>
+<% end %>
